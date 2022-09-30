@@ -2,16 +2,12 @@ body{
     margin: 0;
     padding: 0;   
     font-family: 'Quicksand', sans-serif;
-    overflow-x: hidden;
 }
 
 li{
     list-style: none;
 }
 
-a{
-    color: black;
-}
 /* header */
 .header-content{
     display: flex;
@@ -220,139 +216,3 @@ a{
     margin-top: 10%;
     height: 40px;
 }
-
-/* feature header */
-.header-feature {
-    position: relative;
-    left: 39%;
-}
-
-.header-feature span {
-    color: #57FF1C;
-}
-
-.header-feature-p {
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 20px;
-    font-weight: bold;
-}
-
-.line {
-    position: relative;
-    border-bottom: #57FF1C 3px solid;
-    width: 150px;
-    align-items: center;
-    left: 44%;
-    margin-top: 50px;
-}
-
-/* circle feature */
-.container-feature {
-    display: flex;
-}
-
-.circle-1 {
-    margin-top: 6%;
-    margin-left: 16%;
-    border: transparent 1px solid;
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    background: linear-gradient(89.69deg, #5AC4FF 0.29%, #53FA28 110.8%, #45FF03 110.81%);
-}
-
-.circle-white-1 {
-    background-image: url(img/car.jpg);
-    background-size: cover;
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    border-radius: 100px;
-    margin-left: 10px;
-    margin-top: -10px;
-    background-color: white;
-}
-
-.circle-content-1 {
-    position: relative;
-    top: 90%;
-    text-align: center;
-}
-
-.circle-content-1 p:first-child {
-    font-weight: bold;
-}
-.circle-2 {
-    margin-top: 6%;
-    margin-left: 10%;
-    border: transparent 1px solid;
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    background: linear-gradient(89.69deg, #5AC4FF 0.29%, #53FA28 110.8%, #45FF03 110.81%);
-}
-
-.circle-white-2 {
-    background-image: url(img/logoplus.png);
-    background-size: 120px 120px;
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    border-radius: 100px;
-    margin-left: 10px;
-    margin-top: -10px;
-    background-color: white;
-    padding: 5px 0;
-    box-sizing: border-box;
-    background-position-x: 30px;
-    background-position-y: 30px;
-}
-
-.circle-content-2 {
-    position: relative;
-    top: 90%;
-    text-align: center;
-}
-
-.circle-content-2 p:first-child {
-    font-weight: bold;
-}
-.circle-3 {
-    margin-top: 6%;
-    margin-left: 10%;
-    border: transparent 1px solid;
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    background: linear-gradient(89.69deg, #5AC4FF 0.29%, #53FA28 110.8%, #45FF03 110.81%);
-}
-
-.circle-white-3 {
-    background-image: url(img/rescue.png);
-    background-size: 120px;
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    border-radius: 100px;
-    margin-left: 10px;
-    margin-top: -10px;
-    background-color: white;
-    box-sizing: border-box;
-    background-position-x: 30px;
-    background-position-y: 25px;
-}
-
-.circle-content-3 {
-    position: relative;
-    top: 90%;
-    text-align: center;
-}
-
-.circle-content-3 p:first-child {
-    font-weight: bold;
-}
-
-

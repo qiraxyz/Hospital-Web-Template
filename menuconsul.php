@@ -3,7 +3,7 @@ include 'config.php';
 
 
 
-if(isset($_POST['simpan'])){
+if(isset($_POST['simpan'])) {
     $id_pasien = $_POST['id_pasien'];
     $nama_pasien = $_POST['nama_pasien'];
     $email = $_POST['email'];

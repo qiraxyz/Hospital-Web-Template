@@ -71,12 +71,13 @@
         </div>
         
         <div class="hero-right">
-            <form action="" method="post">
+            <form action="menuconsul.php" method="post">
                 <label for="">Consultation</label>
-                <input type="text" value="" placeholder="Full Name..">
-                <input type="email" value="" placeholder="Email..">
-                <textarea name="" id="" cols="30" rows="10" placeholder="massage"></textarea>
-                <a href=""><button>SEND</button></a>
+                <input required="required" type="text" name="nama_pasien" placeholder="Full Name..">
+                <input required="required" type="email" name="email" placeholder="Email..">
+                <textarea name="pesan" cols="30" rows="10" placeholder="message"></textarea>
+                <input type="text" hidden="hidden" name="id_pasien">
+                <a href=""><button type="submit" name="simpan" value="simpan">Simpan</button></a>
             </form>
         </div>
     </div>

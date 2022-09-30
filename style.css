@@ -355,4 +355,16 @@ a{
     font-weight: bold;
 }
 
+.container-about{
+    margin-top: 300px;
+}
+
+.content-about{
+    margin-bottom: 100px;
+}
+
+.image-about{
+   width: 150px;
+   height: 150px;
+}
 

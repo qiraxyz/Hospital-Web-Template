@@ -12,6 +12,10 @@ li{
 a{
     color: black;
 }
+
+a:hover {
+    color: #57FF1C;
+}
 /* header */
 .header-content{
     display: flex;
@@ -185,6 +189,7 @@ a{
     width: 350px;
     height: 450px;
     border-radius: 15px;
+    box-shadow: 10px 10px 5px #00000071;
 }
 
 .hero-right form label{
@@ -224,7 +229,7 @@ a{
 /* feature header */
 .header-feature {
     position: relative;
-    left: 39%;
+    left: 43%;
 }
 
 .header-feature span {
@@ -248,8 +253,16 @@ a{
 }
 
 /* circle feature */
+.container-header-feature {
+    margin-top: -10px;
+    padding-top: 30px;
+    background: linear-gradient(243.18deg, rgba(87, 255, 28, 0.2) 0%, rgba(12, 211, 255, 0.2) 100%), #FFFFFF;
+}
+
 .container-feature {
     display: flex;
+    background: linear-gradient(243.18deg, rgba(87, 255, 28, 0.2) 0%, rgba(12, 211, 255, 0.2) 100%), #FFFFFF;
+    padding-bottom: 200px;
 }
 
 .circle-1 {
@@ -355,16 +368,85 @@ a{
     font-weight: bold;
 }
 
+/* about */
 .container-about{
-    margin-top: 300px;
+    box-sizing: border-box;
+    margin-top: -100px;
+    margin-left: -100px;
+    background: linear-gradient(243.18deg, rgba(87, 255, 28, 0.2) 0%, rgba(12, 211, 255, 0.2) 100%), #FFFFFF;
+    padding-top: 200px;
+    padding-left: 100px;
+    padding-bottom: 20px;
 }
 
 .content-about{
     margin-bottom: 100px;
+    margin-left: 130px;
 }
 
-.image-about{
-   width: 150px;
-   height: 150px;
+.container-about hr {
+    float: left;
+    position: absolute;
+    margin-top: -5px;
+    width: 50px;
+    border-color: #57FF1C;
 }
 
+.container-about span {
+    color: #57FF1C;
+}
+
+.content-about img {
+    float: right;
+    position: relative;
+    margin-top: -250px;
+    height: 15rem;
+    margin-right: 100px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #00000071;
+}
+
+.image-about-1 {
+    margin-left: 120px;
+}
+
+.image-about-1 p {
+    position: absolute;
+    margin-top: -100px;
+    margin-left: 100px;
+}
+
+.image-about-1 h1 {
+    position: absolute;
+    margin-top: -80px;
+    margin-left: 99px;
+}
+
+.image-about-2 {
+    margin-left: 120px;
+}
+
+.image-about-2 p {
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 551px;
+}
+
+.image-about-2 h1 {
+    position: relative;
+    margin-top: -80px;
+    margin-left: 550px;
+}
+
+.img-abt-1 {
+    position: relative;
+    height: 8rem;
+    margin-left: -50px;
+}
+
+.img-abt-2 {
+    position: absolute;
+    height: 5rem;
+    margin-left: 450px;
+    margin-top: -30px;
+}

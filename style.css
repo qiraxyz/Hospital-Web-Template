@@ -226,6 +226,11 @@ a:hover {
     height: 40px;
 }
 
+.hero-right form a button:hover{
+background-color: #1C6758;
+}
+
+
 /* feature header */
 .header-feature {
     position: relative;
@@ -261,13 +266,15 @@ a:hover {
 
 .container-feature {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(243.18deg, rgba(87, 255, 28, 0.2) 0%, rgba(12, 211, 255, 0.2) 100%), #FFFFFF;
-    padding-bottom: 200px;
+    padding-bottom: 250px;
 }
 
 .circle-1 {
     margin-top: 6%;
-    margin-left: 16%;
+    /* margin-left: 16%; */
     border: transparent 1px solid;
     width: 200px;
     height: 200px;
@@ -374,7 +381,7 @@ a:hover {
     margin-top: -100px;
     margin-left: -100px;
     background: linear-gradient(243.18deg, rgba(87, 255, 28, 0.2) 0%, rgba(12, 211, 255, 0.2) 100%), #FFFFFF;
-    padding-top: 200px;
+    padding-top: 180px;
     padding-left: 100px;
     padding-bottom: 20px;
 }
@@ -400,8 +407,9 @@ a:hover {
     float: right;
     position: relative;
     margin-top: -250px;
+    width: 450px;
     height: 15rem;
-    margin-right: 100px;
+    margin-right: 9%;
     border-radius: 20px;
     box-shadow: 5px 5px 5px #00000071;
 }
@@ -424,6 +432,7 @@ a:hover {
 
 .image-about-2 {
     margin-left: 120px;
+    margin-bottom: 5%;
 }
 
 .image-about-2 p {
@@ -449,4 +458,251 @@ a:hover {
     height: 5rem;
     margin-left: 450px;
     margin-top: -30px;
+}
+
+/* paralax 1 */
+.paralax1{
+    background-image: url(img/paralax1.jpg);
+    background-color: black;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.paralax1-isi{
+    padding-top: 5%;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.paralax1 label:nth-child(2){
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.paralax-isi2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+
+}
+
+.paralax-isi2 img{
+    width: 25px;
+    height: 35px;
+}
+
+.paralax-isi2 p{
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.paralax-isi2 label{
+    margin-left: 8%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.paralax-isi2 a{
+    margin-left: 8%;
+}
+
+.paralax-isi2 a button{
+    margin-left: 8%;
+    background-color: #0fa958;
+    border-radius: 15px;
+    width: 180px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    height: 40px;
+}
+
+.paralax-isi2 a button:hover{
+    background-color: #1C6758;
+}
+
+/* doctor */
+.doctor-content{
+    background: linear-gradient(243.18deg, rgba(87, 255, 28, 0.2) 0%, rgba(12, 211, 255, 0.2) 100%), #FFFFFF;
+    width: 100%;
+    height: 670px;
+    text-align: center;
+}
+
+.isi-doctor {
+    padding-top: 2%;
+}
+
+.isi-doctor span{
+    color: #57FF1C;
+}
+
+.isi-doctor p{
+    color: black;
+    font-weight: bold;
+}
+
+.line-doctor{
+    width: 80px;
+    margin-left: 47%;
+    margin-top: 2%;
+    background-color: black;
+    height: 2px;
+}
+
+/* container-doctor */
+.container-doctor{
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.card1{
+    background-color: white;
+    width: 260px;
+    height: 320px;
+    border-radius: 15px;
+    text-align: center;
+
+}
+
+.card1 div a button,
+.card2 div a button,
+.card3 div a button,
+.card4 div a button{
+    background-color: #0fa958;
+    border-radius: 15px;
+    width: 80px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    margin-top: 20px;
+    height: 30px;
+}
+
+.card1 img,
+.card2 img,
+.card3 img,
+.card4 img{
+    width: 150px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.card2{
+    background-color: white;
+    width: 260px;
+    height: 320px;
+    margin-left: 1%;
+    border-radius: 15px;
+}
+.card3{
+    background-color: white;
+    width: 260px;
+    height: 320px;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 15px;
+}
+.card4{
+    background-color: white;
+    width: 260px;
+    height: 320px;
+    border-radius: 15px;
+}
+
+/* login */
+/* login */
+.zan-login {
+    background-color: white;
+    width: 650px;
+    height: 400px;    
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 20px;
+}
+
+.judul-login{
+    position: absolute;
+    margin-left: 23%;
+    margin-top: -3%;
+    font-size: 25px;
+}
+
+.dokicon{
+    height: 0;
+}
+
+.dokicon img{
+    height: 300px;
+    margin-left: 8%;
+}
+
+.isi-left{
+    display: flex;
+}
+
+.isi-left img{
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+.isi-left p{
+    font-weight: bold;
+    margin-top: 6.5%;
+    margin-left: 2%;
+}
+
+.isi-right input{
+    height: 30px;
+    width: 250px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 30px;
+}
+
+.isi-right{
+    position: relative;
+    line-height: 20px;
+    margin-left: 48%;
+}
+
+.isi-right a button{
+    margin-top: 13%;
+    margin-left: 23%;
+    background-color: #0FA958;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    width: 150px;
+    height: 35px;
+    font-weight: bold;
+}
+
+.isi-right a button:hover{
+    background-color: #1C6758;
+}
+
+.dont-login{
+    margin-top: 65px;
+    color: #5A5A5A;
+}
+
+.dont-login a{
+    color: #0FA958;
+}
+/* regis */
+
+.have-account a{
+    color: #0FA958;;
 }

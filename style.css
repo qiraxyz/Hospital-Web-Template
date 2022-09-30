@@ -1,0 +1,218 @@
+body{
+    margin: 0;
+    padding: 0;   
+    font-family: 'Quicksand', sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+/* header */
+.header-content{
+    display: flex;
+}
+
+.header-left{
+    align-items: center;
+    display: flex;
+    margin-left: 9%;
+    margin-top: 1.5%;
+    margin-bottom: 1%;
+}
+
+.header-left img{
+    width: 60px;
+}
+
+.header-left span{
+    margin-left: 10%;
+    font-weight: 900;
+    font-size: 30px;
+}
+/* header-left */
+.header-right1{
+    display: flex;
+    margin-top: 2%;
+    margin-left: 25%;
+}
+
+.header-right1 img{
+    width: 40px;
+    height: 40px;
+    opacity: 50%;
+}
+
+.header-right1 div{
+    display: flex;
+    margin-left: 10%;
+    flex-direction: column;
+    line-height: 0;
+}
+
+.header-right2{
+    display: flex;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.header-right2 img{
+    width: 40px;
+    height: 40px;
+    opacity: 50%;
+}
+
+.header-right2 div{
+    display: flex;
+    margin-left: 10%;
+    flex-direction: column;
+    line-height: 0;
+}
+
+.header-btn{
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.btn-login{
+    background-color: transparent;
+    width: 150px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.btn-login:hover{
+    background-color: #0fa958;
+    width: 150px;
+    height: 40px;
+    color: white;
+    border: none;
+}
+
+/* navbar */
+/* nav */
+.navbar{
+    width: 91%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 9%;
+    background-color: #1C6758;
+}
+
+
+.nav-link{
+    display: flex;
+    width: 300px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.nav-link a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link a:hover{
+    color : #57FF1C;   
+}
+/* hero */
+.hero img{
+    width: 100%;
+    height: 650px;
+}
+
+.hero-left{
+    position: absolute;
+    top: 300px;
+    left: 9%;
+}
+
+.hero-left p:first-child{
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.hero-left p:nth-child(2){
+    color: white;
+    font-weight: 900;
+    font-size: 35px;
+    margin-top: -2%;
+}
+
+.hero-left p:nth-child(3){
+    color: white;
+    font-weight: 300;
+    font-size: 15px;
+    width: 480px;
+    margin-top: -4%;
+}
+
+.header-btn2{
+    margin-top: 2%;
+}
+
+.btn-login2{
+    background-color: transparent;
+    width: 150px;
+    color: white;
+    font-weight: bold;
+    height: 40px;
+    border: 1px solid white;
+}
+
+.btn-login2:hover{
+    background-color: #0fa958;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    color: white;
+    border: none;
+}
+
+/* hero-right */
+.hero-right{
+    right: 9%;
+    padding: 1% 0px;
+    top: 230px;
+    position: absolute;
+    background-color: white;
+    width: 350px;
+    height: 450px;
+    border-radius: 15px;
+}
+
+.hero-right form label{
+    font-weight: bold;
+    font-size: 25px;
+    margin: 5% 5%;
+}
+
+.hero-right form input:nth-child(2),
+.hero-right form input:nth-child(3),
+.hero-right form textarea:nth-child(4),
+.hero-right form input:nth-child(5)
+{ 
+    color: black; 
+    padding: 10px 0px;
+    width: 280px;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-left: 5%;
+    float: left;
+    
+}
+
+.hero-right form a button{
+    margin-left: 50px;
+    background-color: #0fa958;
+    border-radius: 15px;
+    width: 180px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    margin-left: 25%;
+    margin-top: 10%;
+    height: 40px;
+}

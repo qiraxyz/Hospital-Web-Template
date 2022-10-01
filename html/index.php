@@ -213,10 +213,10 @@
                                     <table class="table mb-0 table-hover align-middle text-nowrap">
                                         <thead>
                                             <tr>
-                                                <th class="border-top-0">No</th>
-                                                <th class="border-top-0">nama pasien</th>
-                                                <th class="border-top-0">email</th>
-                                                <th class="border-top-0">Pesan</th>
+                                                <th class="border-top-0"><h4>No</h4></th>
+                                                <th class="border-top-0"><h4>Nama Pasien</h4></th>
+                                                <th class="border-top-0"><h4>Email</h4></th>
+                                                <th class="border-top-0"><h4>Pesan</h4></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -229,7 +229,7 @@
                                             
                                             echo "<tr>";
                                             echo "<td>". $sis [0]. "</td>";
-                                            echo "<td>". $sis [1]. "</td>";
+                                            echo "<td><h5>". $sis [1]. "</h5></td>";
                                             echo "<td>". $sis [2]. "</td>";
                                             echo "<td>". $sis [3]. "</td>";
                                             // echo "<td>". "<button>". "<a href='editform_siswa.php?id_siswa=".$sis['id_siswa']."'>edit</a>" . "</button>";
@@ -254,7 +254,7 @@
                                 <!-- title -->
                                 <div class="d-md-flex">
                                     <div>
-                                        <h4 class="card-title">Semua Pesanan</h4>
+                                        <h4 class="card-title">Semua Artikel</h4>
                                         <h5 class="card-subtitle">Terbaru</h5>
                                     </div>
                                 </div>
@@ -263,15 +263,15 @@
                                     <table class="table mb-0 table-hover align-middle text-nowrap">
                                         <thead>
                                             <tr>
-                                                <th class="border-top-0">No</th>
-                                                <th class="border-top-0">nama pasien</th>
-                                                <th class="border-top-0">email</th>
-                                                <th class="border-top-0">Pesan</th>
+                                                <th class="border-top-0"><h4>No</h4></th>
+                                                <th class="border-top-0"><h4>Judul</h4></th>
+                                                <th class="border-top-0"><h4>File</h4></th>
+                                                <th class="border-top-0"><h4>Isi</h4></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $sql = "SELECT * FROM consultation";
+                                            $sql = "SELECT * FROM artikel ORDER BY id_gambar DESC";
                                             $query = mysqli_query($connect,$sql);
                                      
                                             //take and put data with array to table
@@ -282,6 +282,7 @@
                                             echo "<td>". $sis [1]. "</td>";
                                             echo "<td>". $sis [2]. "</td>";
                                             echo "<td>". $sis [3]. "</td>";
+                                           
                                             // echo "<td>". "<button>". "<a href='editform_siswa.php?id_siswa=".$sis['id_siswa']."'>edit</a>" . "</button>";
                                             // echo "<button>". "<a href='hapus_siswa.php?id_siswa=".$sis['id_siswa']."'>delete</a>". "</button>"; 
                                             echo "</td>";

@@ -1,1 +1,228 @@
-<?php include 'config.php'?>
+<?php
+session_start();
+include 'config.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link -->
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/09294afb62.js" crossorigin="anonymous"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header-content">
+        <div class="header-left">
+            <a href=""><img src="img/logohs.png" alt=""></a>
+            <span>Hospital</span>
+        </div>
+
+        <div class="header-right1">
+            <img src="img/logo-call.png" alt="">
+            <div>
+                <p><strong>CALL US</strong></p>
+                <span>0899988779</span>
+            </div>
+        </div>
+
+        <div class="header-right2">
+            <img src="img/logo-email.png" alt="">
+            <div>
+                <p><strong>EMAIL US</strong></p>
+                <span>Info@Hospital.net</span>
+            </div>
+        </div>
+
+        <div class="header-btn">
+            <a href="login.php"><button class="btn-login">login</button></a>
+        </div>
+    </div>
+
+    <!-- nav -->
+    <nav class="navbar">
+        <div class="nav-link">
+            <div><a href="">Home</a></div>
+            <div><a href="">News</a></div>
+            <div><a href="">Contact</a></div>
+            <div><a href="">Feature</a></div>
+        </div>
+    </nav>
+
+    <!-- hero -->
+    <div class="hero">
+        <img src="img/hero-img.jpg" alt="">
+
+        <div class="hero-left">
+            <p>Happy to see Healty</p>
+            <p>Best Hospital Care<br>& Wellness Center</p>
+            <p>A society of healthy communities where all individuals reach their highest potential for health.</p>
+
+            <div class="header-btn2">
+                <a href="login.php"><button class="btn-login2">login</button></a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <form action="menuconsul.php" method="post">
+                <label for="">Consultation</label>
+                <input required="required" type="text" name="nama_pasien" placeholder="Full Name..">
+                <input required="required" type="email" name="email" placeholder="Email..">
+                <textarea name="pesan" cols="30" rows="10" placeholder="message"></textarea>
+                <input type="text" hidden="hidden" name="id_pasien">
+                <a href=""><button type="submit" name="simpan" value="simpan">Simpan</button></a>
+            </form>
+        </div>
+    </div>
+    <!-- feature -->
+    <div class="container-header-feature">
+        <div class="header-feature">
+            <h1><span>Fitur </span>Center</h1>
+        </div>
+        <div class="header-feature-p">
+            <p>Do eiusmod tempor incididunt ut labore et dolore magna aliqua sed ipsum uat enim <br> veniam
+                quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        </div>
+        <div class="line"></div>
+    </div>
+
+    <!-- feature content -->
+    <div class="container-feature">
+        <div class="circle-1">
+            <img src="" alt="">
+            <div class="circle-white-1"></div>
+            <div class="circle-content-1">
+                <p>Medical Excellence</p>
+                <p>always fast and on time 24/7
+                    always put safety first</p>
+                <a href="">Read me</a>
+            </div>
+        </div>
+        <div class="circle-2">
+            <img src="" alt="">
+            <div class="circle-white-2"></div>
+            <div class="circle-content-2">
+                <p>Medical Excellence</p>
+                <p>always fast and on time 24/7
+                    always put safety first</p>
+                <a href="">Read me</a>
+            </div>
+        </div>
+        <div class="circle-3">
+            <img src="" alt="">
+            <div class="circle-white-3"></div>
+            <div class="circle-content-3">
+                <p>Medical Excellence</p>
+                <p>always fast and on time 24/7 always put safety first</p>
+                <a href="">Read me</a>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <div class="container-about">
+        <div class="content-about">
+            <h1>Tentang <span>Center</span></h1>
+            <p>Do eiusmod tempor incididunt ut labore et dolore <br> magna aliqua sed ipsumuat enim <br> veniam quis
+                nostrud exercitation ullamco laboris nisi <br> ut aliquip.</p>
+            <hr size="1px" width="100" margin-left="100px">
+            <p>Do eiusmod tempor incididunt ut labore et dolore <br> magna aliqua sed ipsumuat enim <br> veniam quis
+                nostrud exercitation ullamco laboris nisi <br> ut aliquip.</p>
+            <img src="img/project3-1.jpg" alt="">
+        </div>
+        <div class="image-about-1">
+            <img src="img/image_2022-09-30_081313285-removebg-preview.png" class="img-abt-1">
+            <p>Over 20 Year OF</p>
+            <h1>METICUE</h1>
+        </div>
+        <div class="image-about-2">
+            <img src="img/image_2022-09-30_081700803-removebg-preview.png" class="img-abt-2">
+            <p>Over 20 Year OF</p>
+            <h1>METICUE</h1>
+        </div>
+    </div>
+
+    <!-- paralax -->
+    <div class="paralax1">
+        <div class="paralax1-isi">
+            <label>Ready to Improve Your Health? Book Your Appointment today!</label>
+            <label for="">
+                <p>A society of healthy communities <br> where all individuals reach their highest potential for health.
+                </p>
+            </label>
+
+            <div class="paralax-isi2">
+                <img src="img/logo-call.png" alt="">
+                <p>TLP kami (234)-350-9876</p>
+                <label for="">OR</label>
+                <a href=""><button>SEND</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- doctor -->
+    <div class="doctor-content">
+        
+        <div class="isi-doctor">
+            <h1><span>Doctor</span> Center</h1>
+            <p>Hospital Indonesia Jakarta is a private institution that was established in 1906.</p>
+            <div class="line-doctor"></div>
+        </div>
+        
+        <div class="container-doctor">
+            <div class="card1">
+                <img src="img/mandoctor.jpg" alt="">
+                <div>
+                    <strong>Dr.Kevin</strong>
+                    <br>
+                    <label>General Practitioner</label>
+                    <br>
+                    <a href=""><button type="button" name="about" value="about">about</button></a>
+                </div>
+            </div>
+            <div class="card2">
+                <img src="img/mandoctor.jpg" alt="">
+                <div>
+                    <strong>Dr.Kevin</strong>
+                    <br>
+                    <label>General Practitioner</label>
+                    <br>
+                    <a href=""><button type="button" name="about" value="about">about</button></a>
+                </div>
+            </div>
+            <div class="card3">
+                <img src="img/mandoctor.jpg" alt="">
+                <div>
+                    <strong>Dr.Kevin</strong>
+                    <br>
+                    <label>General Practitioner</label>
+                    <br>
+                    <a href=""><button type="button" name="about" value="about">about</button></a>
+                </div>
+            </div>
+            <div class="card4">
+                <img src="img/mandoctor.jpg" alt="">
+                <div>
+                    <strong>Dr.Kevin</strong>
+                    <br>
+                    <label>General Practitioner</label>
+                    <br>
+                    <a href=""><button type="button" name="about" value="about">about</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

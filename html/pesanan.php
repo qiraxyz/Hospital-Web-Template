@@ -1,3 +1,7 @@
+<?php
+include 'config.php';
+?>
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -22,18 +26,25 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<style>
+    th{
+        text-align: center;
+    }
+</style>
 </head>
 
 <body>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
+
     <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
         </div>
     </div>
+    
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
@@ -189,75 +200,32 @@
                         </div>
                         <div class="table-responsive">
                             <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">id</th>
-                                        <th scope="col">nama</th>
-                                        <th scope="col">email</th>
-                                        <th scope="col">pesan</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                    
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="table-responsive m-t-20">
-                            <table class="table table-bordered table-responsive-lg">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">id</th>
-                                        <th scope="col">nama</th>
-                                        <th scope="col">email</th>
-                                        <th scope="col">pesan</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
+                                
+                                    <?php
+                                    $sql = "SELECT * FROM consultation";
+                                    $query = mysqli_query($connect, $sql);
+                                    while ($consul = mysqli_fetch_array($query)){
                                         
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                       
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
+                                        echo"<tr>";
+                                        echo"<th>".$consul [0]."</th>";
+                                        echo"<th>".$consul [1]."</th>";
+                                        echo"<th>".$consul [2]."</th>";
+                                        echo"<th>".$consul [3]."</th>";
+                                        echo"</tr>";
+                                        echo "<td>";
+                                        echo "<button><a href='formedit.php?Id=".$consul['id_pasien']."'>Edit</a></button>"; 
+                                        echo "<a>  </a>";
+                                        echo "<button><a href='hapus.php?Id=".$consul['id_pasien']."'>Hapus</a></button>"; 
+                                        echo "</td>";
                                         
-                                    </tr>
-                                </tbody>
+                                        }
+                                    ?>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
                     </div>
                   
                 <!-- ============================================================== -->

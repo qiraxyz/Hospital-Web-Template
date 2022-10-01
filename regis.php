@@ -1,3 +1,8 @@
+<?php
+session_start();
+include 'config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,27 +32,30 @@
 
             <div class="isi-right">
                 <label for=""><img src="img/nameicon.png" alt=""></label>
-                <input type="text" placeholder="Full Name...">
+                <input type="text" name="nama" placeholder="Full Name...">
                 <br>
                 <label for=""><img src="img/nameicon.png" alt=""></label>
-                <input type="text" placeholder="Email...">
+                <input type="text" name="email" placeholder="Email...">
                 <br>
                 <label for=""><img src="img/passicon.png" alt="" style="height: 25px;"></label>
-                <input type="password" placeholder="Password"> 
+                <input type="password" name="pass" placeholder="Password"> 
                 <br>
-                <a href=""><button>Login</button></a>
+                <a href=""><button>Sign Up</button></a>
 
                 <!-- dont have account -->
                 <br>
                 <br>
                 <div class="have-account">
                 <label for="">have account?</label>
-                <a href="login.html">Sing In</a>
+                <a href="login.html">Sign In</a>
                 </div>
             </div>
 
         </div>
     </div>
+    <?php
+    
+    ?>
 </body>
 
 </html>

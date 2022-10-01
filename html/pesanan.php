@@ -138,7 +138,7 @@
                                 href="pages-profile.html" aria-expanded="false"><i
                                     class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="article.html" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
+                                href="article.php" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
                                     class="hide-menu">Article</span></a></li>
                                       <!-- pesanan -->
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"

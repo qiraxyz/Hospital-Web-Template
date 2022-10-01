@@ -1,3 +1,6 @@
+<?php include 'config.php'; ?>
+
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -28,12 +31,12 @@
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
         </div>
-    </div>
+    </div> -->
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
@@ -139,7 +142,7 @@
                                     class="hide-menu">Article</span></a></li>
                                       <!-- pesanan -->
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                            href="pesanan.html" aria-expanded="false"><i class="mdi mdi-content-duplicate fs-4 text-black" ></i><span
+                            href="pesanan.php" aria-expanded="false"><i class="mdi mdi-content-duplicate fs-4 text-black" ></i><span
                                 class="hide-menu">Pesanan</span></a></li>
                     </ul>
 
@@ -190,71 +193,37 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
-                                    <tr>
-                                        <th scope="col">id</th>
-                                        <th scope="col">nama</th>
-                                        <th scope="col">email</th>
-                                        <th scope="col">pesan</th>
+                                <tr> 
+                                        <th scope="col"><b>id</b></th>
+                                        <th scope="col"><b>nama</b></th>
+                                        <th scope="col"><b>email</b></th>
+                                        <th scope="col"><b>pesan</b></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                    
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                    </tr>
+                                <?php
+                                $sql = "SELECT * FROM consultation";
+                                $query = mysqli_query($connect,$sql);
+
+                                //take and put data with array to table
+                                while ($sis = (mysqli_fetch_array($query))) {
+                                
+                                echo "<tr>";
+                                echo "<td>". $sis [0]. "</td>";
+                                echo "<td>". $sis [1]. "</td>";
+                                echo "<td>". $sis [2]. "</td>";
+                                echo "<td>". $sis [3]. "</td>";
+                                // echo "<td>". "<button>". "<a href='editform_siswa.php?id_siswa=".$sis['id_siswa']."'>edit</a>" . "</button>";
+                                // echo "<button>". "<a href='hapus_siswa.php?id_siswa=".$sis['id_siswa']."'>delete</a>". "</button>"; 
+                                echo "</td>";
+                                echo "</tr>";
+                                
+                                                  }
+                                         ?>
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="table-responsive m-t-20">
-                            <table class="table table-bordered table-responsive-lg">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">id</th>
-                                        <th scope="col">nama</th>
-                                        <th scope="col">email</th>
-                                        <th scope="col">pesan</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                       
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                        
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                       
+                        
                     </div>
                 </div>
             </div>

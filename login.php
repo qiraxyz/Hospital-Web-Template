@@ -63,7 +63,7 @@ include 'config.php';
         if($r['status']=='admin'){
             $_SESSION['email'] = $email;
             $_SESSION['status'] = 'admin';
-            header('location:/last-project/html/index.html');
+            header('location:/last-project/html/index.php');
         }else{
             header("location:login.php?pesan=gagal");
         }

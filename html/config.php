@@ -6,6 +6,6 @@
     $db = "hospital";
 
     $connect = mysqli_connect($shock,$user,$pass,$db)or
-    die ("Gagal Menghubungkan");
+    die ("Location: error-404.html");
 
 ?>

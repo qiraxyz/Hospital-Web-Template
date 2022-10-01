@@ -31,12 +31,12 @@
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
-    <!-- <div class="preloader">
+    <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
         </div>
-    </div> -->
+    </div>
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
@@ -204,7 +204,7 @@
                                 <?php
                                 $sql = "SELECT * FROM consultation";
                                 $query = mysqli_query($connect,$sql);
-
+                         
                                 //take and put data with array to table
                                 while ($sis = (mysqli_fetch_array($query))) {
                                 

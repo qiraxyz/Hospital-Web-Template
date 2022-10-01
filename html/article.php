@@ -1,3 +1,5 @@
+<?php include 'config.php' ?>
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -135,7 +137,7 @@
                                 href="pages-profile.html" aria-expanded="false"><i
                                     class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="article.html" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
+                                href="article.php" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
                                     class="hide-menu">Article</span></a></li>
                                       <!-- pesanan -->
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
@@ -194,63 +196,31 @@
                                         <th scope="col">id</th>
                                         <th scope="col">judul</th>
                                         <th scope="col">Isi</th>
-                                        <th scope="col">Heading</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
+                                    <?php
+                                    $sql = "SELECT * FROM artikel";
+                                    $query = mysqli_query($connect,$sql);
+                             
+                                    //take and put data with array to table
+                                    while ($sis = (mysqli_fetch_array($query))) {
                                     
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                    </tr>
+                                    echo "<tr>";
+                                    echo "<td>". $sis [0]. "</td>";
+                                    echo "<td>". $sis [1]. "</td>";
+                                    echo "<td>". $sis [2]. "</td>";
+                                    // echo "<td>". "<button>". "<a href='editform_siswa.php?id_siswa=".$sis['id_siswa']."'>edit</a>" . "</button>";
+                                    // echo "<button>". "<a href='hapus_siswa.php?id_siswa=".$sis['id_siswa']."'>delete</a>". "</button>"; 
+                                    echo "</td>";
+                                    echo "</tr>";
+                                    
+                                                      }
+                                             ?>
                                 </tbody>
                             </table>
                         </div>
-                        <div class="table-responsive m-t-20">
-                            <table class="table table-bordered table-responsive-lg">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">id</th>
-                                        <th scope="col">judul</th>
-                                        <th scope="col">isi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                       
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                        
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                       
                     </div>
                 </div>
             </div>

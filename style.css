@@ -375,8 +375,8 @@ a:hover {
     margin-left: -100px;
     background: linear-gradient(243.18deg, rgba(87, 255, 28, 0.2) 0%, rgba(12, 211, 255, 0.2) 100%), #FFFFFF;
     padding-top: 200px;
-    padding-left: 100px;
-    padding-bottom: 20px;
+    padding-left: 120px;
+    padding-bottom: 40px;
 }
 
 .content-about{
@@ -450,3 +450,184 @@ a:hover {
     margin-left: 450px;
     margin-top: -30px;
 }
+
+/* artikel */
+
+.container-artikel {
+    margin: 0;
+    padding-top: 20px;
+    background: linear-gradient(243.18deg, rgba(87, 255, 28, 0.2) 0%, rgba(12, 211, 255, 0.2) 100%), #FFFFFF;
+}
+
+.header-artikel h1 {
+    margin-left: 45px;
+}
+
+.header-artikel p {
+    margin-left: 45px;
+}
+
+.header-artikel span {
+    color: #57FF1C;
+}
+
+.header-artikel {
+    text-align: center;
+}
+
+.line-artikel {
+    left: 46%;
+    position: absolute;
+    width: 150px;
+    margin-top: 20px;
+    border-bottom: 3px solid black;
+}
+
+.card1 {
+    position: relative;
+    background-color: #f4f4f4;
+    width: 300px;
+    height: 550px;
+    border-radius: 10px;
+    left: 110px;
+    top: 291px;
+    box-shadow: 7px 4px 4px #00000071;
+    margin-top: -120px;
+    padding: 0 20px;
+}
+
+.card1 p:first-child {
+    font-size: 18px;
+    position: relative;
+    text-align: center;
+    font-weight: bold ;
+    top: 60%;
+}
+
+.card1 p:nth-child(2) {
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    top: 60%;
+}
+.card2 {
+    position: relative;
+    background-color: #f4f4f4;
+    width: 300px;
+    height: 550px;
+    border-radius: 10px;
+    left: 350px;
+    /* top: 291px; */
+    box-shadow: 7px 4px 4px #00000071;
+    margin-top: -120px;
+    padding: 0 20px;
+}
+
+.card2 p:first-child {
+    font-size: 18px;
+    position: relative;
+    text-align: center;
+    font-weight: bold ;
+    top: 60%;
+}
+
+.card2 p:nth-child(2) {
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    top: 60%;
+}
+.card3 {
+    position: relative;
+    background-color: #f4f4f4;
+    width: 300px;
+    height: 550px;
+    border-radius: 10px;
+    left: 350px;
+    /* top: 291px; */
+    box-shadow: 7px 4px 4px #00000071;
+    margin-top: -120px;
+    padding: 0 20px;
+}
+
+.card3 p:first-child {
+    font-size: 18px;
+    position: relative;
+    text-align: center;
+    font-weight: bold ;
+    top: 60%;
+}
+
+.card3 p:nth-child(2) {
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    top: 60%;
+}
+
+.btn-rd-more {
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0);
+    background-color: #0FA958;
+    box-shadow: 7px 4px 4px #00000071;
+    border-radius: 5px;
+    width: 300px;
+    height: 45px;
+    left: 24rem;
+    top: 40rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn-rd-more label {
+    position: absolute;
+    margin-top: 12px;
+    margin-left: -120px;
+    width: 20vw;
+}
+
+/* FOOTER */
+.container-footer {
+    margin-top: 30rem;
+    bottom: 0;
+    padding: 0;
+    position: relative;
+    background-color: #001A20;
+    height: 600px;
+}
+
+.left-content {
+    position: absolute;
+    background-color: #3C3C3C;  
+    height: 500px;
+    margin-left: 10%;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    width: 400px;
+}
+
+.left-content p {
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.line-left-content {
+    margin: 60px auto;
+    border-bottom: white 3px solid;
+    width: 300px;
+}
+
+.left-content-1 {
+    position: absolute;
+    margin-top: -10px;
+    text-align: center;
+    margin-left: 45px;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+} 

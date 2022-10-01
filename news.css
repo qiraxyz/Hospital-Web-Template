@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+a {
+    color: white;
+}
+
+/* header */
+.header-content{
+    display: flex;
+}
+
+.header-left{
+    align-items: center;
+    display: flex;
+    margin-left: 9%;
+    margin-top: 1.5%;
+    margin-bottom: 1%;
+}
+
+.header-left img{
+    width: 60px;
+}
+
+.header-left span{
+    margin-left: 10%;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.header-right1{
+    display: flex;
+    margin-top: 2%;
+    margin-left: 25%;
+}
+
+.header-right1 img{
+    width: 40px;
+    height: 40px;
+    opacity: 50%;
+}
+
+.header-right1 div{
+    display: flex;
+    margin-left: 10%;
+    flex-direction: column;
+    line-height: 0;
+}
+
+.header-right2{
+    display: flex;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.header-right2 img{
+    width: 40px;
+    height: 40px;
+    opacity: 50%;
+}
+
+.header-right2 div{
+    display: flex;
+    margin-left: 10%;
+    flex-direction: column;
+    line-height: 0;
+}
+
+.header-btn{
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.btn-login{
+    background-color: transparent;
+    width: 150px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.btn-login:hover{
+    background-color: #0fa958;
+    width: 150px;
+    height: 40px;
+    color: white;
+    border: none;
+}
+
+/* navbar */
+/* nav */
+.navbar{
+    width: 91%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 9%;
+    background-color: #1C6758;
+}
+
+
+.nav-link{
+    display: flex;
+    width: 300px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.nav-link a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link a:hover{
+    color : #57FF1C;   
+}
+
+.title-nav {
+    text-align: center;
+    background-color: #1C6758;
+    height: 100px;
+    width: 100%;
+}
+
+.title-nav p {
+    color: white;
+}
+
+/* content */
+
+.container {
+    display: block;
+    overflow: hidden;
+    height: 320vh;
+    width: 100%;
+    background: linear-gradient(243.18deg, rgba(87, 255, 28, 0.2) 0%, rgba(12, 211, 255, 0.2) 100%), #FFFFFF;
+}
+
+.card1 {
+    margin-left: -60px;
+    margin-top: 40px;
+    padding-left: 40px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 900px;
+    height: 300px;
+    left: 18%;
+    box-shadow: 12px 12px 4px #00000054;
+}
+
+.card1 h1 {
+    font-size: 35px;
+    position: absolute;
+    top: 20px;
+    left: 49%;
+}
+
+.card1 p {
+    font-size: 20px;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+}
+
+.card2 {
+    margin-left: -60px;
+    margin-top: 400px;
+    padding-left: 40px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 900px;
+    height: 300px;
+    left: 18%;
+    box-shadow: 12px 12px 4px #00000054;
+}
+
+.card2 h1 {
+    font-size: 35px;
+    position: absolute;
+    top: 20px;
+    left: 49%;
+}
+
+.card2 p {
+    font-size: 20px;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+}
+
+.card3 {
+    margin-left: -60px;
+    margin-top: 800px;
+    padding-left: 40px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 900px;
+    height: 300px;
+    left: 18%;
+    box-shadow: 12px 12px 4px #00000054;
+}
+
+.card3 h1 {
+    font-size: 35px;
+    position: absolute;
+    top: 20px;
+    left: 49%;
+}
+
+.card3 p {
+    font-size: 20px;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+}
+
+.card4 {
+    margin-left: -60px;
+    margin-top: 1200px;
+    padding-left: 40px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 900px;
+    height: 300px;
+    left: 18%;
+    box-shadow: 12px 12px 4px #00000054;
+}
+
+.card4 h1 {
+    font-size: 35px;
+    position: absolute;
+    top: 20px;
+    left: 49%;
+}
+
+.card4 p {
+    font-size: 20px;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+}
+
+.card5 {
+    margin-left: -60px;
+    margin-top: 1600px;
+    padding-left: 40px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 900px;
+    height: 300px;
+    left: 18%;
+    box-shadow: 12px 12px 4px #00000054;
+}
+
+.card5 h1 {
+    font-size: 35px;
+    position: absolute;
+    top: 20px;
+    left: 49%;
+}
+
+.card5 p {
+    font-size: 20px;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+}
+
+/* FOOTER */
+.container-footer {
+    bottom: 0;
+    padding: 0;
+    position: relative;
+    background-color: #001A20;
+    height: 600px;
+}
+
+.left-content {
+    position: absolute;
+    background-color: #3C3C3C;  
+    height: 500px;
+    margin-left: 10%;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    width: 400px;
+}
+
+.left-content p {
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.line-left-content {
+    margin: 60px auto;
+    border-bottom: white 3px solid;
+    width: 300px;
+}
+
+.left-content-1 {
+    position: absolute;
+    margin-top: -100px;
+    text-align: center;
+    margin-left: 45px;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+} 

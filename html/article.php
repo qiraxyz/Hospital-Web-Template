@@ -1,4 +1,6 @@
-<?php include 'config.php' ?>
+<?php
+include 'config.php';
+?>
 
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -194,29 +196,26 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">id</th>
+                                        <th scope="col">gambar</th>
                                         <th scope="col">judul</th>
-                                        <th scope="col">Isi</th>
+                                        <th scope="col">isi</th>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                     $sql = "SELECT * FROM artikel";
                                     $query = mysqli_query($connect,$sql);
-                             
-                                    //take and put data with array to table
-                                    while ($sis = (mysqli_fetch_array($query))) {
-                                    
-                                    echo "<tr>";
-                                    echo "<td>". $sis [0]. "</td>";
-                                    echo "<td>". $sis [1]. "</td>";
-                                    echo "<td>". $sis [2]. "</td>";
-                                    // echo "<td>". "<button>". "<a href='editform_siswa.php?id_siswa=".$sis['id_siswa']."'>edit</a>" . "</button>";
-                                    // echo "<button>". "<a href='hapus_siswa.php?id_siswa=".$sis['id_siswa']."'>delete</a>". "</button>"; 
-                                    echo "</td>";
-                                    echo "</tr>";
-                                    
-                                                      }
-                                             ?>
+
+                                    while ($sis = (mysqli_fetch_array($query))){
+                                        echo "<tr>";
+                                        echo "<td>". $sis [0]. "</td>";
+                                        echo "<td>". $sis [1]. "</td>";
+                                        echo "<td>". $sis [2]. "</td>";
+                                        echo "<td>". $sis [3]. "</td>";
+                                        echo "</tr>";
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>

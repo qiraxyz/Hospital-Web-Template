@@ -13,7 +13,7 @@ if(isset($_POST['simpan'])) {
     $query = mysqli_query($connect, $sql);
 
     if($query){
-        header('Location: index.html');
+        header('Location: index.php');
     }else{
         header('Location: menuconsul.php?status=gagal');
     }

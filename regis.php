@@ -47,7 +47,7 @@ include 'config.php';
                 <br>
                 <div class="have-account">
                 <label for="">have account?</label>
-                <a href="login.html">Sign In</a>
+                <a href="login.php">Sign In</a>
                 </div>
             </div>
 

@@ -169,6 +169,7 @@ include 'config.php';
                             </ol>
                           </nav>
                         <h1 class="mb-0 fw-bold">Article Data</h1> 
+                        <a href="buatartikel.php">+ Article</a>
                     </div>
                 </div>
             </div>
@@ -193,15 +194,15 @@ include 'config.php';
                                 <thead>
                                     <tr>
                                         <th scope="col">id</th>
-                                        <th scope="col">gambar</th>
                                         <th scope="col">judul</th>
+                                        <th scope="col">gambar</th>
                                         <th scope="col">isi</th>
-                                        
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $sql = "SELECT * FROM artikel";
+                                    $sql = "SELECT * FROM artikel GROUP BY id_gambar DESC LIMIT 5";
                                     $query = mysqli_query($connect,$sql);
 
                                     while ($sis = (mysqli_fetch_array($query))){
@@ -210,6 +211,10 @@ include 'config.php';
                                         echo "<td>". $sis [1]. "</td>";
                                         echo "<td>". $sis [2]. "</td>";
                                         echo "<td>". $sis [3]. "</td>";
+                                        echo "<td> 
+                                        <a href='ubah_article.php?id= $sis[0]'>Ubah</a> 
+                                        <a href='hapus_article.php?id= $sis[0]'>Hapus</a>
+                                        </td>";
                                         echo "</tr>";
                                     }
                                     ?>

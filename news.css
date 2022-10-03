@@ -139,133 +139,25 @@ a {
 }
 
 .card1 {
-    margin-left: -60px;
-    margin-top: 40px;
+    display: flex;
+    margin: 40px auto;
     padding-left: 40px;
-    position: absolute;
     background-color: rgb(255, 255, 255);
     width: 900px;
     height: 300px;
-    left: 18%;
     box-shadow: 12px 12px 4px #00000054;
 }
 
-.card1 h1 {
+.text{
+    margin: 20px auto;
+}
+
+.text h1 {
     font-size: 35px;
-    position: absolute;
-    top: 20px;
-    left: 49%;
 }
 
-.card1 p {
+.text p {
     font-size: 20px;
-    position: absolute;
-    top: 75px;
-    left: 50%;
-}
-
-.card2 {
-    margin-left: -60px;
-    margin-top: 400px;
-    padding-left: 40px;
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    width: 900px;
-    height: 300px;
-    left: 18%;
-    box-shadow: 12px 12px 4px #00000054;
-}
-
-.card2 h1 {
-    font-size: 35px;
-    position: absolute;
-    top: 20px;
-    left: 49%;
-}
-
-.card2 p {
-    font-size: 20px;
-    position: absolute;
-    top: 75px;
-    left: 50%;
-}
-
-.card3 {
-    margin-left: -60px;
-    margin-top: 800px;
-    padding-left: 40px;
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    width: 900px;
-    height: 300px;
-    left: 18%;
-    box-shadow: 12px 12px 4px #00000054;
-}
-
-.card3 h1 {
-    font-size: 35px;
-    position: absolute;
-    top: 20px;
-    left: 49%;
-}
-
-.card3 p {
-    font-size: 20px;
-    position: absolute;
-    top: 75px;
-    left: 50%;
-}
-
-.card4 {
-    margin-left: -60px;
-    margin-top: 1200px;
-    padding-left: 40px;
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    width: 900px;
-    height: 300px;
-    left: 18%;
-    box-shadow: 12px 12px 4px #00000054;
-}
-
-.card4 h1 {
-    font-size: 35px;
-    position: absolute;
-    top: 20px;
-    left: 49%;
-}
-
-.card4 p {
-    font-size: 20px;
-    position: absolute;
-    top: 75px;
-    left: 50%;
-}
-
-.card5 {
-    margin-left: -60px;
-    margin-top: 1600px;
-    padding-left: 40px;
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    width: 900px;
-    height: 300px;
-    left: 18%;
-    box-shadow: 12px 12px 4px #00000054;
-}
-
-.card5 h1 {
-    font-size: 35px;
-    position: absolute;
-    top: 20px;
-    left: 49%;
-}
-
-.card5 p {
-    font-size: 20px;
-    position: absolute;
-    top: 75px;
-    left: 50%;
 }
 
 /* FOOTER */

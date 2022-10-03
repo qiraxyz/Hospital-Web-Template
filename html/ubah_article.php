@@ -1,5 +1,14 @@
 <?php
     include 'config.php';
+
+    $id = $_GET['id'];
+    $tampil = mysqli_query($connect, "SELECT * FROM artikel WHERE id_gambar = '$id'");
+
+    $data = mysqli_fetch_array($tampil);
+
+    if(mysqli_num_rows($tampil)<1){
+        die('data tidak ditemukan');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -17,17 +26,18 @@
             <tr>
                 <td>Judul</td>
                 <td>:</td>
-                <td><input type="text" name="judul"></td>
+                <td><input type="text" name="judul" value="<?=$data['judul']?>"></td>
             </tr>
             <tr>
                 <td>Isi</td>
                 <td>:</td>
-                <td><input type="text" name="isi"></td>
+                <td><input type="text" name="isi" value='<?=$data['isi']?>'></td>
             </tr>
             <tr>
                 <td>File</td>
                 <td>:</td>
-                <td><input type="file" name="file"></td>
+                <td><input type="file" name="file"> <img src="../assets/images/<?=$data['file']?>" alt=""></td>
+                <td></td>
             </tr>
             <tr>
                 <td></td>
@@ -47,7 +57,13 @@
 
         move_uploaded_file($file_tmp, "../assets/images/$file");
 
-        $query = mysqli_query($connect, "INSERT INTO artikel VALUES('', '$judul', '$file', '$isi')");
+        if($file != ""){
+            $query = mysqli_query($connect, "UPDATE artikel SET judul='$judul', file='$file',isi='$isi' WHERE id_gambar = '$id'");
+        }else{
+            $query = mysqli_query($connect, "UPDATE artikel SET judul='$judul', isi='$isi' WHERE id_gambar = '$id'");
+
+        }
+
 
         if($query){
             header("Location: article.php");

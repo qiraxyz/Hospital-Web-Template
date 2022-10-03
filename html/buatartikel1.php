@@ -1,5 +1,6 @@
 <?php
 include 'config.php';
+ob_start()
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +27,23 @@ include 'config.php';
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<style>
+    table tr:first-child input {
+        padding-right: 40vw;
+        border: none;
+        box-shadow: 2px 2px 4px #00000071; 
+        margin-top: 10px
+    }
+    table tr:nth-child(2) input {
+        padding-right: 40vw;
+        border: none;
+        box-shadow: 2px 2px 4px #00000071; 
+        margin-top: 10px
+    }
+    .table-responsive h2 {
+        margin-left: 15px;
+    }
+</style>
 </head>
 
 <body>
@@ -159,20 +177,6 @@ include 'config.php';
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
-            <div class="page-breadcrumb">
-                <div class="row align-items-center">
-                    <div class="col-6">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb mb-0 d-flex align-items-center">
-                              <li class="breadcrumb-item"><a href="index.html" class="link"><i class="mdi mdi-home-outline fs-4"></i></a></li>
-                              <li class="breadcrumb-item active" aria-current="page">Article Data</li>
-                            </ol>
-                          </nav>
-                        <h1 class="mb-0 fw-bold">Article Data</h1> 
-                        <a href="buatartikel1.php">+ Article</a>
-                    </div>
-                </div>
-            </div>
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
@@ -186,38 +190,58 @@ include 'config.php';
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Last Article</h4>
-                            <h6 class="card-subtitle">article related</h6>
+                            <h4 class="card-title">Tambah Artikel</h4>
+                            <h6 class="card-subtitle">Add Article</h6>
                         </div>
                         <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">id</th>
-                                        <th scope="col">judul</th>
-                                        <th scope="col">gambar</th>
-                                        <th scope="col">isi</th>
-                                        <th scope="col">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $sql = "SELECT * FROM artikel GROUP BY id_gambar DESC LIMIT 5";
-                                    $query = mysqli_query($connect,$sql);
+                        <h2>Silahkan Input Data</h2>
+                        <form action="" method="post" enctype="multipart/form-data">
+                            <table>
+                                <tr>
+                                    <td>Judul</td>
+                                    <td>:</td>
+                                    <td><input type="text" name="judul"></td>
+                                </tr>
+                                <tr>
+                                    <td>Isi</td>
+                                    <td>:</td>
+                                    <td><input type="text" name="isi"></td>
+                                </tr>
+                                <tr>
+                                    <td>File</td>
+                                    <td>:</td>
+                                    <td><input type="file" name="file"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td><input type="submit" name="kirim" value="Kirim"></td>
+                                </tr>
+                            </table>
+                        </form>
 
-                                    while ($sis = (mysqli_fetch_array($query))){
-                                        echo "<tr>";
-                                        echo "<td>". $sis [0]. "</td>";
-                                        echo "<td>". $sis [1]. "</td>";
-                                        echo "<td>". $sis [2]. "</td>";
-                                        echo "<td>". $sis [3]. "</td>";
-                                        echo "<td> 
-                                        <a href='ubah_article1.php?id= $sis[0]'>Ubah</a> 
-                                        <a href='hapus_article.php?id= $sis[0]'>Hapus</a>
-                                        </td>";
-                                        echo "</tr>";
-                                    }
-                                    ?>
+                        <?php
+                        if(isset($_POST['kirim'])){
+                            $judul = $_POST['judul'];
+                            $isi = $_POST['isi'];
+                            $file = $_FILES['file']['name'];
+
+                            $file_tmp = $_FILES['file']['tmp_name'];
+
+                            move_uploaded_file($file_tmp, "../assets/images/$file");
+
+                            $query = mysqli_query($connect, "INSERT INTO artikel VALUES('', '$judul', '$file', '$isi')");
+
+                            if($query){
+                                header("Location: article.php");
+                            }else{
+                                header("Location: buatartikel.php?status='gagal'");
+                            }
+                            
+                                // var_dump($file);
+                                // die;
+                        }
+                        ?>
                                 </tbody>
                             </table>
                         </div>

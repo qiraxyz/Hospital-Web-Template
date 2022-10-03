@@ -240,18 +240,18 @@ include 'config.php';
             Jame. Di duga Jame tepar selepas racing
             liar.</p>
         <div class="card2">
-            <p>DITEMUKAN JAME OLEH Dr. Adhen</p>
-            <p>Dr. Adhen menemukan pasien tepar bernama
-            Jame. Di duga Jame tepar selepas racing
-            liar.</p>
+            <p>Dr fauzan menyelamtkan Ariq</p>
+            <p>Dr Fauzan ini sungguh hebat ygy.
+            Dengan ini, Ariq bisa lanjut bermain.
+            Blox Fruit.</p>
         <div class="card3">
-            <p>DITEMUKAN JAME OLEH Dr. Adhen</p>
-            <p>Dr. Adhen menemukan pasien tepar bernama
-            Jame. Di duga Jame tepar selepas racing
-            liar.</p>
+            <p>Arrafi membantu Dr. Adhen</p>
+            <p>Arrafi telah membantu Dr. Adhen
+            menemukan pulpen joyko kesayangannya.
+            akhirnya bisa turu dengan nyenyak.</p>
         </div>
     </div>
-    <a href="news.html"><div class="btn-rd-more"><label>READ MORE ARTICLES</label></div></a>
+    <a href="news.php"><div class="btn-rd-more"><label>READ MORE ARTICLES</label></div></a>
 </div>
 </div>
 </div>

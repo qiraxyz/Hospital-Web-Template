@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: 'Quicksand', sans-serif;
 }
 
 a {
@@ -153,53 +154,105 @@ a {
 }
 
 .text h1 {
-    font-size: 35px;
+    font-size: 24px;
 }
 
 .text p {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* FOOTER */
 .container-footer {
-    bottom: 0;
-    padding: 0;
+    margin-top: -50px;
     position: relative;
+    width: 100%;
+    height: 350px;
     background-color: #001A20;
-    height: 600px;
 }
 
-.left-content {
+.header-footer {
+    margin-top: 20px;
     position: absolute;
-    background-color: #3C3C3C;  
-    height: 500px;
-    margin-left: 10%;
-    padding-top: 10px;
-    margin-bottom: 20px;
-    width: 400px;
+    left: 33%;
+    color: white;
+    text-align: center;
+    justify-content: center;
 }
 
-.left-content p {
+.header-footer span {
+    color: #57FF1C;
+}
+
+.header-footer ul {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.header-footer ul a {
     color: white;
-    font-weight: bold;
-    font-size: 13px;
     position: relative;
-    margin-top: 100px;
-    text-align: center;
+    text-decoration: none;
+    margin: 40px 30px;
+    transition: all .3s ease;
 }
 
-.line-left-content {
-    margin: 60px auto;
-    border-bottom: white 3px solid;
-    width: 300px;
+.header-footer ul a:hover {
+    color: #57FF1C;
 }
 
-.left-content-1 {
+.logo-footer {
     position: absolute;
-    margin-top: -100px;
-    text-align: center;
-    margin-left: 45px;
+    width: 45px;
+    height: 45px;
+    border: #001A20 1px solid;
+    border-radius: 100px;
+    background-color: white;
+    left: 40%;
+    box-sizing: border-box;
+    top: 60%;
+    padding: 5px;
+    padding-top: 7px;
+    margin-left: 30px;
+}
+
+.logo-footer-2 {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border: #001A20 1px solid;
+    border-radius: 100px;
+    background-color: white;
+    left: 40%;
+    box-sizing: border-box;
+    top: 60%;
+    padding: 5px;
+    padding-top: 5px;
+    margin-left: 120px;
+}
+
+.logo-footer-3 {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border: #001A20 1px solid;
+    border-radius: 100px;
+    background-color: white;
+    left: 40%;
+    box-sizing: border-box;
+    top: 60%;
+    padding: 5px;
+    padding-top: 5px;
+    margin-left: 210px;
+}
+
+.foot-footer {
+    position: absolute;
+    left: 35%;
+    margin-top: -50px;
     color: white;
-    font-weight: bold;
-    font-size: 13px;
-} 
+}
+
+.foot-footer span {
+    color: #57FF1C;
+}

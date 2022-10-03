@@ -1,5 +1,6 @@
 <?php
 include 'config.php';
+ob_start()
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +27,28 @@ include 'config.php';
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<style>
+    table tr input {
+        margin-bottom: 10px;
+    }
+    table tr:first-child input {
+        padding-right: 40vw;
+        border: none;
+        box-shadow: 2px 2px 4px #00000071; 
+    }
+    table tr:nth-child(2) input {
+        padding-right: 40vw;
+        border: none;
+        box-shadow: 2px 2px 4px #00000071; 
+    }
+    .table-responsive h2 {
+        margin-left: 15px
+    }
+
+    table input img {
+        width: 100px;
+    }
+</style>
 </head>
 
 <body>
@@ -158,21 +181,7 @@ include 'config.php';
         <div class="page-wrapper">
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
-            <div class="page-breadcrumb">
-                <div class="row align-items-center">
-                    <div class="col-6">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb mb-0 d-flex align-items-center">
-                              <li class="breadcrumb-item"><a href="index.html" class="link"><i class="mdi mdi-home-outline fs-4"></i></a></li>
-                              <li class="breadcrumb-item active" aria-current="page">Article Data</li>
-                            </ol>
-                          </nav>
-                        <h1 class="mb-0 fw-bold">Article Data</h1> 
-                        <a href="buatartikel1.php">+ Article</a>
-                    </div>
-                </div>
-            </div>
+
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
@@ -183,41 +192,96 @@ include 'config.php';
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
+            <?php
+            include 'config.php';
+
+            $id = $_GET['id'];
+            $tampil = mysqli_query($connect, "SELECT * FROM artikel WHERE id_gambar = '$id'");
+
+            $data = mysqli_fetch_array($tampil);
+
+            if(mysqli_num_rows($tampil)<1){
+                die('data tidak ditemukan');
+            }
+        ?>
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Halaman Input Data</title>
+        </head>
+        <body>
+        <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Last Article</h4>
-                            <h6 class="card-subtitle">article related</h6>
+                            <h4 class="card-title">Ubah Artikel</h4>
+                            <h6 class="card-subtitle">Edit Article</h6>
                         </div>
                         <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">id</th>
-                                        <th scope="col">judul</th>
-                                        <th scope="col">gambar</th>
-                                        <th scope="col">isi</th>
-                                        <th scope="col">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $sql = "SELECT * FROM artikel GROUP BY id_gambar DESC LIMIT 5";
-                                    $query = mysqli_query($connect,$sql);
+                        <h2>Silahkan Input Data</h2>
+                        <form action="" method="post" enctype="multipart/form-data">
+                            <table>
+                                <tr>
+                                    <td>Judul</td>
+                                    <td>:</td>
+                                    <td><input type="text" name="judul" value="<?=$data['judul']?>"></td>
+                                </tr>
+                                <tr>
+                                    <td>Isi</td>
+                                    <td>:</td>
+                                    <td><input type="text" name="isi" value='<?=$data['isi']?>'></td>
+                                </tr>
+                                <tr>
+                                    <td>File</td>
+                                    <td>:</td>
+                                    <td><input type="file" name="file"> <img style="width: 300px; margin-left: -85px" src="../assets/images/<?=$data['file']?>" alt=""></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td><input type="submit" name="kirim" value="Kirim"></td>
+                                </tr>
+                            </table>
+                        </form>
 
-                                    while ($sis = (mysqli_fetch_array($query))){
-                                        echo "<tr>";
-                                        echo "<td>". $sis [0]. "</td>";
-                                        echo "<td>". $sis [1]. "</td>";
-                                        echo "<td>". $sis [2]. "</td>";
-                                        echo "<td>". $sis [3]. "</td>";
-                                        echo "<td> 
-                                        <a href='ubah_article1.php?id= $sis[0]'>Ubah</a> 
-                                        <a href='hapus_article.php?id= $sis[0]'>Hapus</a>
-                                        </td>";
-                                        echo "</tr>";
-                                    }
-                                    ?>
+            <?php
+            if(isset($_POST['kirim'])){
+                $judul = $_POST['judul'];
+                $isi = $_POST['isi'];
+                $file = $_FILES['file']['name'];
+
+                $file_tmp = $_FILES['file']['tmp_name'];
+
+                move_uploaded_file($file_tmp, "../assets/images/$file");
+
+                if($file != ""){
+                    $query = mysqli_query($connect, "UPDATE artikel SET judul='$judul', file='$file',isi='$isi' WHERE id_gambar = '$id'");
+                }else{
+                    $query = mysqli_query($connect, "UPDATE artikel SET judul='$judul', isi='$isi' WHERE id_gambar = '$id'");
+
+                }
+
+
+                if($query){
+                    header("Location: article.php");
+                }else{
+                    header("Location: buatartikel.php?status='gagal'");
+                }
+                
+                    // var_dump($file);
+                    // die;
+            }
+            ?>
+</body>
+</html>
                                 </tbody>
                             </table>
                         </div>

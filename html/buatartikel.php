@@ -50,7 +50,7 @@
         $query = mysqli_query($connect, "INSERT INTO artikel VALUES('', '$judul', '$file', '$isi')");
 
         if($query){
-            header("Location: article.php");
+            header("Location: index.php");
         }else{
             header("Location: buatartikel.php?status='gagal'");
         }

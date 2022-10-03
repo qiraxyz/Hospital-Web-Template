@@ -840,6 +840,9 @@ background-color: #1C6758;
 
 .card1 {
     position: relative;
+    background-image: url(img/project3-1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
     background-color: #f4f4f4;
     width: 300px;
     height: 400px;
@@ -856,17 +859,20 @@ background-color: #1C6758;
     position: relative;
     text-align: center;
     font-weight: bold ;
-    top: 60%;
+    top: 67%;
 }
 
 .card1 p:nth-child(2) {
     font-size: 16px;
     position: relative;
     text-align: center;
-    top: 60%;
+    top: 67%;
 }
 .card2 {
     position: relative;
+    background-image: url(img/project3-1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
     background-color: #f4f4f4;
     width: 300px;
     height: 400px;
@@ -883,17 +889,20 @@ background-color: #1C6758;
     position: relative;
     text-align: center;
     font-weight: bold ;
-    top: 60%;
+    top: 67%;
 }
 
 .card2 p:nth-child(2) {
     font-size: 16px;
     position: relative;
     text-align: center;
-    top: 60%;
+    top: 67%;
 }
 .card3 {
     position: relative;
+    background-image: url(img/project3-1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
     background-color: #f4f4f4;
     width: 300px;
     height: 400px;
@@ -910,14 +919,14 @@ background-color: #1C6758;
     position: relative;
     text-align: center;
     font-weight: bold ;
-    top: 60%;
+    top: 67%;
 }
 
 .card3 p:nth-child(2) {
     font-size: 16px;
     position: relative;
     text-align: center;
-    top: 60%;
+    top: 67%;
 }
 
 .btn-rd-more {
